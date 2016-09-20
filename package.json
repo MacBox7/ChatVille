@@ -1,0 +1,16 @@
+{
+  "name": "socket_demo",
+  "version": "1.0.0",
+  "description": "Basic socket.io application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankit Joshi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.10.2",
+    "socket.io": "^1.4.8"
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <![endif]-->
+  <title>ChatVilla</title>
+  <!-- BOOTSTRAP CORE STYLE CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body style="font-family:Verdana">
+  <ul class="pages">
+    <li  class = "chat page" style="display:none">
+    <div class="container">
+      <div class="row " style="padding-top:40px;">
+        <h2 class="text-center" style="color:#3385ff;">ChatVilla</h2>
+        <br /><br />
+        <div class="col-md-16">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              RECENT CHAT HISTORY
+            </div>
+            <div class="panel-body">
+              <ul class="media-list" id="chat" style="height:600px;overflow:scroll;">
+              </ul>
+            </div>
+            <div class="panel-footer">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Enter Message" id="message"/>
+                      <span class="input-group-btn">
+                            <button class="btn btn-info" type="button" id="btnSubmit">SEND</button>
+                      </span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" id = "nickName"/>
+      </div>
+    </li>
+  </ul>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src = "/js/index.js"></script>
+</body>
+</html>
