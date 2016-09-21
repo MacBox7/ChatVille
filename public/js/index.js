@@ -62,6 +62,7 @@ $(function(){
     $(".login.page").css("display","none");
     $(".chat.page").css("display","block");
     flag = true;
+    initialize();
   });
 
   socket.on('newmsg', function(data){
@@ -78,4 +79,13 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+function initialize(){
+
+  $.get( '/chat', function(data) {
+       for(var i = 0;i<data.length;i++){
+         $('#chat').append('<li class="media"> <div class="media-body"> <div class="media"><a class="pull-left" href="#"><b>'+data[i].user+':</b></a><div class="media-body" >'+data[i].message+'<br/><hr/></div></div></div></li>');
+       }
+     });
 }
