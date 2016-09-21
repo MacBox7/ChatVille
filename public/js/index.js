@@ -11,6 +11,7 @@ $(function(){
           "background-color" : getRandomColor(),
           "transition" : "background-color 3s ease"
         });
+        scroll();
       }, 1000);
     }
     $("#btnSubmit").click(function(){
@@ -88,4 +89,8 @@ function initialize(){
          $('#chat').append('<li class="media"> <div class="media-body"> <div class="media"><a class="pull-left" href="#"><b>'+data[i].user+':</b></a><div class="media-body" >'+data[i].message+'<br/><hr/></div></div></div></li>');
        }
      });
+}
+
+function scroll(){
+  $('#chat').animate({scrollTop: $('#chat').prop("scrollHeight")}, 1000);
 }
