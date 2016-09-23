@@ -11,7 +11,6 @@ $(function(){
           "background-color" : getRandomColor(),
           "transition" : "background-color 3s ease"
         });
-        scroll();
       }, 1000);
     }
     $("#btnSubmit").click(function(){
@@ -64,11 +63,13 @@ $(function(){
     $(".chat.page").css("display","block");
     flag = true;
     initialize();
+    scroll();
   });
 
   socket.on('newmsg', function(data){
     if(user){
       $('#chat').append('<li class="media"> <div class="media-body"> <div class="media"><a class="pull-left" href="#"><b>'+data.user+':</b></a><div class="media-body" >'+data.message+'<br/><hr/></div></div></div></li>');
+      scroll();
     }
   });
 });
